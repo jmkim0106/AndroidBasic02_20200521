@@ -17,11 +17,12 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
-        setUpEvent();
+        setUpEvents();
         setValues();
     }
 
-    public void setUpEvent() {
+    @Override
+    public void setUpEvents() {
 
         binding.okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
