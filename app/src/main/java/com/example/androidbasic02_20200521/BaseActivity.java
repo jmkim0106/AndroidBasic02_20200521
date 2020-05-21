@@ -1,14 +1,14 @@
 package com.example.androidbasic02_20200521;
 
+import android.content.Context;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+public abstract class BaseActivity extends AppCompatActivity {
+    public Context mContext = this;
 
-public class BaseActivity extends AppCompatActivity {
+    public abstract void setUpEvents();
+    public abstract void setValues();
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base);
-    }
+
 }
